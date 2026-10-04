@@ -5,9 +5,9 @@
 export const profile = {
   firstName: 'Garry',
   lastName: 'Bhullar',
-  role: 'Web Developer & Designer',
-  location: 'Toronto, Canada',
-  timezone: 'America/Toronto',
+  role: 'Freelance Web Developer',
+  location: 'Edmonton, Canada',
+  timezone: 'America/Edmonton',
   email: 'gurlaganbhullar@gmail.com',
   available: true,
   tagline:
@@ -16,15 +16,12 @@ export const profile = {
     'I help small businesses and growing brands stand out online. From the first sketch to launch day, I handle design, development and everything in between — so you get a site that loads fast, looks sharp on every screen and turns visitors into customers.',
   socials: [
     { label: 'GitHub', url: 'https://github.com/gurlagan' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/' },
-    { label: 'Instagram', url: 'https://instagram.com/' },
   ],
 };
 
 export const stats = [
-  { value: 6, suffix: '+', label: 'Years of experience' },
+  { value: 3, suffix: '+', label: 'Years as a freelance web developer' },
   { value: 18, suffix: '', label: 'Happy clients' },
-  { value: 99, suffix: '', label: 'Lighthouse score' },
 ];
 
 // Each project renders a mini browser mockup from `site` — no images required.
@@ -100,11 +97,4 @@ export const process = [
   { title: 'Design', description: 'I create a clean, on-brand design and refine it with your feedback.' },
   { title: 'Build', description: 'Your site is developed to be fast, responsive and easy to update.' },
   { title: 'Launch', description: 'We go live, set up analytics and make sure everything runs smoothly.' },
-];
-
-export const experience = [
-  { role: 'Independent Creative Developer', company: 'Self-employed', period: '2023 — Now' },
-  { role: 'Senior Frontend Engineer', company: 'Northwind Labs', period: '2021 — 2023' },
-  { role: 'Frontend Developer', company: 'Studio Parallel', period: '2019 — 2021' },
-  { role: 'Web Design Intern', company: 'Brightline Agency', period: '2018 — 2019' },
 ];

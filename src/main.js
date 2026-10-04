@@ -1,5 +1,5 @@
 import './style.css';
-import { profile, stats, projects, services, process, experience } from './data.js';
+import { profile, stats, projects, services, process } from './data.js';
 
 const pad = (n) => String(n).padStart(2, '0');
 const arrow = `<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`;
@@ -123,25 +123,10 @@ document.querySelector('#app').innerHTML = `
           </li>`).join('')}
       </ol>
     </section>
-
-    <section class="experience container">
-      <div class="section-head">
-        <div class="section-label reveal"><span>(05)</span> Experience</div>
-        <h2 class="section-title reveal">Where I've <em>been</em></h2>
-      </div>
-      <ul class="exp-list">
-        ${experience.map((e) => `
-          <li class="exp-item reveal">
-            <span class="exp-role">${e.role}</span>
-            <span class="exp-company">${e.company}</span>
-            <span class="exp-period">${e.period}</span>
-          </li>`).join('')}
-      </ul>
-    </section>
   </main>
 
   <footer class="contact container" id="contact">
-    <div class="section-label reveal"><span>(06)</span> Contact</div>
+    <div class="section-label reveal"><span>(05)</span> Contact</div>
     <h2 class="contact-title reveal">Have a project<br />in <em>mind?</em></h2>
     <div class="contact-actions reveal">
       <a href="mailto:${profile.email}" class="contact-cta">Get in touch ${arrow}</a>
