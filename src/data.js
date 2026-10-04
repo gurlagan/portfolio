@@ -3,22 +3,21 @@
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
-  firstName: 'Gurlagan',
+  firstName: 'Garry',
   lastName: 'Bhullar',
-  role: 'Creative Developer & Designer',
+  role: 'Web Developer & Designer',
   location: 'Toronto, Canada',
   timezone: 'America/Toronto',
-  email: 'hello@gurlagan.dev',
+  email: 'gurlaganbhullar@gmail.com',
   available: true,
   tagline:
-    'I design and engineer digital experiences that feel effortless — fast, precise, and quietly unforgettable.',
+    'I design and build fast, modern websites that help businesses look professional and win more customers.',
   statement:
-    'I partner with founders and ambitious teams to turn complex ideas into products people love to use. Strategy, interface, motion and code — handled end to end, with an obsessive eye for the details most people never notice.',
+    'I help small businesses and growing brands stand out online. From the first sketch to launch day, I handle design, development and everything in between — so you get a site that loads fast, looks sharp on every screen and turns visitors into customers.',
   socials: [
-    { label: 'GitHub', url: 'https://github.com/' },
+    { label: 'GitHub', url: 'https://github.com/gurlagan' },
     { label: 'LinkedIn', url: 'https://linkedin.com/' },
-    { label: 'X / Twitter', url: 'https://x.com/' },
-    { label: 'Dribbble', url: 'https://dribbble.com/' },
+    { label: 'Instagram', url: 'https://instagram.com/' },
   ],
 };
 
@@ -28,52 +27,79 @@ export const stats = [
   { value: 99, suffix: '', label: 'Lighthouse score' },
 ];
 
-// `colors` drive the generated preview artwork — no images required.
-// Add `image: '/your-image.jpg'` (placed in /public) to use a real screenshot instead.
+// Each project renders a mini browser mockup from `site` — no images required.
+// Add `image: '/your-image.jpg'` (placed in /public) to show a real screenshot instead.
 export const projects = [
   {
     title: 'Ente Plumbing',
     category: 'Business Website',
     year: '2026',
-    description: 'A fast, mobile-friendly website for a local plumbing company.',
-    colors: ['#3d6bff', '#060b24'],
+    description: 'A fast, mobile-friendly website for a local plumbing company, built to turn visitors into booked jobs.',
+    tags: ['Design', 'Development', 'SEO'],
+    colors: ['#3d6bff', '#0a1440'],
+    site: { domain: 'enteplumbing.com', kicker: '24/7 Emergency Service', headline: 'Plumbing done right, the first time.', cta: 'Get a quote' },
     url: '#',
   },
   {
     title: 'Spark Clean',
     category: 'Business Website',
     year: '2026',
-    description: 'A clean, modern website for a professional cleaning service.',
-    colors: ['#ff4d1c', '#2a0a02'],
+    description: 'A clean, modern website for a professional cleaning service with online booking.',
+    tags: ['Design', 'Development', 'Booking'],
+    colors: ['#ff4d1c', '#3a0d02'],
+    site: { domain: 'sparkclean.ca', kicker: 'Homes & Offices', headline: 'A spotless space, without the stress.', cta: 'Book a clean' },
+    url: '#',
+  },
+  {
+    title: 'Maple Dental',
+    category: 'Healthcare Website',
+    year: '2025',
+    description: 'A calm, trustworthy site for a family dental clinic, with appointment requests and service pages.',
+    tags: ['Design', 'Development', 'Forms'],
+    colors: ['#2fbf9b', '#06302a'],
+    site: { domain: 'mapledental.ca', kicker: 'Family Dentistry', headline: 'Healthy smiles for the whole family.', cta: 'Book a visit' },
+    url: '#',
+  },
+  {
+    title: 'Iron Peak Fitness',
+    category: 'Gym Website',
+    year: '2025',
+    description: 'A bold, high-energy website for a local gym featuring class schedules and membership plans.',
+    tags: ['Branding', 'Development', 'CMS'],
+    colors: ['#d4ff3f', '#1c2404'],
+    site: { domain: 'ironpeakfit.com', kicker: 'Train Harder', headline: 'Stronger every single week.', cta: 'Join now' },
     url: '#',
   },
 ];
 
 export const services = [
   {
-    title: 'Web Development',
-    description:
-      'Blazing-fast, accessible websites and web apps built with modern frameworks and meticulous attention to performance.',
-    items: ['JavaScript / TypeScript', 'React & Next.js', 'Node.js APIs', 'Headless CMS'],
+    title: 'Business Websites',
+    description: 'Custom, professional websites that build trust and make it easy for customers to contact or book you.',
+    items: ['Custom design', 'Mobile-first', 'Contact & booking'],
   },
   {
-    title: 'Interface Design',
-    description:
-      'Interfaces that are clear, considered and distinctive — from first wireframe to a production-ready design system.',
-    items: ['Product design', 'Design systems', 'Prototyping', 'UX audits'],
+    title: 'Landing Pages',
+    description: 'Focused, high-converting pages for launches, ads and promotions — designed to get people to act.',
+    items: ['Copy layout', 'Lead forms', 'A/B ready'],
   },
   {
-    title: 'Motion & WebGL',
-    description:
-      'Purposeful animation and real-time 3D that give a brand presence and make every interaction feel alive.',
-    items: ['GSAP', 'Three.js / WebGL', 'Shaders', 'Micro-interactions'],
+    title: 'SEO & Speed',
+    description: 'Lightning-fast load times and solid on-page SEO, so customers can actually find you on Google.',
+    items: ['Core Web Vitals', 'Google Business', 'Analytics'],
   },
   {
-    title: 'Strategy',
-    description:
-      'Clarity before pixels. Positioning, information architecture and roadmaps that align the product with the business.',
-    items: ['Discovery workshops', 'Content strategy', 'Analytics', 'Technical consulting'],
+    title: 'Care & Updates',
+    description: 'Ongoing support after launch — content updates, fixes and improvements whenever you need them.',
+    items: ['Hosting setup', 'Monthly updates', 'Priority support'],
   },
+];
+
+export const process = [
+  { title: 'Discover', description: 'We talk about your business, your customers and what the website needs to achieve.' },
+  { title: 'Design', description: 'I create a clean, on-brand design and refine it with your feedback.' },
+  { title: 'Build', description: 'Your site is developed to be fast, responsive and easy to update.' },
+  { title: 'Launch', description: 'We go live, set up analytics and make sure everything runs smoothly.' },
 ];
 
 export const experience = [

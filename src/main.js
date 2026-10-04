@@ -1,17 +1,26 @@
 import './style.css';
-import { profile, stats, projects, services, experience } from './data.js';
+import { profile, stats, projects, services, process, experience } from './data.js';
 
 const pad = (n) => String(n).padStart(2, '0');
 const arrow = `<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`;
 const fullName = `${profile.firstName} ${profile.lastName}`;
 const year = new Date().getFullYear();
 
-const visual = (p, i) => `
+const visual = (p) => `
   <div class="visual" style="--c1:${p.colors[0]};--c2:${p.colors[1]}">
-    ${p.image ? `<img src="${p.image}" alt="${p.title}" loading="lazy" />` : `
-      <div class="visual-orb"></div>
-      <div class="visual-grid"></div>
-      <span class="visual-index">${pad(i + 1)}</span>`}
+    ${p.image ? `<img src="${p.image}" alt="${p.title} website" loading="lazy" />` : `
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><i></i><i></i><i></i><span>${p.site.domain}</span></div>
+        <div class="mock-page">
+          <div class="mock-nav"><b>${p.title}</b><span></span><span></span><span></span><em>${p.site.cta}</em></div>
+          <div class="mock-hero">
+            <small>${p.site.kicker}</small>
+            <strong>${p.site.headline}</strong>
+            <div class="mock-btns"><em>${p.site.cta}</em><u>Learn more</u></div>
+          </div>
+          <div class="mock-cards"><span></span><span></span><span></span></div>
+        </div>
+      </div>`}
   </div>`;
 
 document.querySelector('#app').innerHTML = `
@@ -68,18 +77,18 @@ document.querySelector('#app').innerHTML = `
     <section class="work container" id="work">
       <div class="section-head">
         <div class="section-label reveal"><span>(02)</span> Selected Work</div>
-        <h2 class="section-title reveal">Recent <em>projects</em></h2>
+        <h2 class="section-title reveal">Recent <em>projects</em><sup>${pad(projects.length)}</sup></h2>
       </div>
       <div class="work-grid">
         ${projects.map((p, i) => `
-          <a href="${p.url}" class="work-card reveal">
-            ${visual(p, i)}
+          <a href="${p.url}" class="work-card reveal" style="transition-delay:${(i % 2) * 100}ms">
+            ${visual(p)}
             <div class="work-info">
               <h3 class="work-title">${p.title} ${arrow}</h3>
-              <span class="work-year">${p.year}</span>
+              <span class="work-year">${p.category} · ${p.year}</span>
             </div>
             <p class="work-desc">${p.description}</p>
-            <span class="work-cat">${p.category}</span>
+            <ul class="work-tags">${p.tags.map((t) => `<li>${t}</li>`).join('')}</ul>
           </a>`).join('')}
       </div>
     </section>
@@ -100,9 +109,24 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
 
+    <section class="process container">
+      <div class="section-head">
+        <div class="section-label reveal"><span>(04)</span> Process</div>
+        <h2 class="section-title reveal">How we'll <em>work</em> together</h2>
+      </div>
+      <ol class="process-grid">
+        ${process.map((step, i) => `
+          <li class="process-step reveal" style="transition-delay:${i * 80}ms">
+            <span class="process-num">${pad(i + 1)}</span>
+            <h3>${step.title}</h3>
+            <p>${step.description}</p>
+          </li>`).join('')}
+      </ol>
+    </section>
+
     <section class="experience container">
       <div class="section-head">
-        <div class="section-label reveal"><span>(04)</span> Experience</div>
+        <div class="section-label reveal"><span>(05)</span> Experience</div>
         <h2 class="section-title reveal">Where I've <em>been</em></h2>
       </div>
       <ul class="exp-list">
@@ -117,12 +141,13 @@ document.querySelector('#app').innerHTML = `
   </main>
 
   <footer class="contact container" id="contact">
-    <div class="section-label reveal"><span>(05)</span> Contact</div>
+    <div class="section-label reveal"><span>(06)</span> Contact</div>
     <h2 class="contact-title reveal">Have a project<br />in <em>mind?</em></h2>
     <div class="contact-actions reveal">
       <a href="mailto:${profile.email}" class="contact-cta">Get in touch ${arrow}</a>
-      <button class="contact-email">${profile.email}</button>
+      <button class="contact-email" title="Click to copy">${profile.email}</button>
     </div>
+    <p class="contact-note reveal">Usually replies within 24 hours.</p>
     <div class="footer-bottom">
       <div class="footer-col">
         <span class="footer-label">Local time</span>
