@@ -138,12 +138,13 @@ document.querySelector('#app').innerHTML = `
         <span class="footer-label">Local time</span>
         <span class="clock">--:--</span>
       </div>
+      ${profile.socials.length ? `
       <div class="footer-col">
         <span class="footer-label">Socials</span>
         <div class="socials">
           ${profile.socials.map((s) => `<a href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`).join('')}
         </div>
-      </div>
+      </div>` : ''}
       <div class="footer-col">
         <span class="footer-label">© ${year}</span>
         <span>${fullName}</span>

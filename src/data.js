@@ -14,9 +14,8 @@ export const profile = {
     'I design and build fast, modern websites that help businesses look professional and win more customers.',
   statement:
     'I help small businesses and growing brands stand out online. From the first sketch to launch day, I handle design, development and everything in between — so you get a site that loads fast, looks sharp on every screen and turns visitors into customers.',
-  socials: [
-    { label: 'GitHub', url: 'https://github.com/gurlagan' },
-  ],
+  // Add links like { label: 'GitHub', url: 'https://github.com/you' } to show a Socials column
+  socials: [],
 };
 
 export const stats = [
