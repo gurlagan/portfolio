@@ -8,7 +8,11 @@ const year = new Date().getFullYear();
 
 const visual = (p) => `
   <div class="visual" style="--c1:${p.colors[0]};--c2:${p.colors[1]}">
-    ${p.image ? `<img src="${p.image}" alt="${p.title} website" loading="lazy" />` : `
+    ${p.screenshot ? `
+      <div class="mock mock-shot" aria-hidden="true">
+        <div class="mock-bar"><i></i><i></i><i></i><span>${p.site.domain}</span></div>
+        <img src="${p.screenshot}" alt="" loading="lazy" />
+      </div>` : p.image ? `<img src="${p.image}" alt="${p.title} website" loading="lazy" />` : `
       <div class="mock" aria-hidden="true">
         <div class="mock-bar"><i></i><i></i><i></i><span>${p.site.domain}</span></div>
         <div class="mock-page">
@@ -81,7 +85,7 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="work-grid">
         ${projects.map((p, i) => `
-          <a href="${p.url}" class="work-card reveal" style="transition-delay:${(i % 2) * 100}ms">
+          <a href="${p.url}" class="work-card reveal"${p.url.startsWith('/') ? ' target="_blank" rel="noopener"' : ''} style="transition-delay:${(i % 2) * 100}ms">
             ${visual(p)}
             <div class="work-info">
               <h3 class="work-title">${p.title} ${arrow}</h3>

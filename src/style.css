@@ -241,6 +241,7 @@ section[id], footer[id] { scroll-margin-top: 4rem; }
   transition: transform 0.6s var(--ease);
 }
 .work-card:hover .mock { transform: translate(-1.5%, -2.5%); }
+.mock-shot img { display: block; width: 100%; height: auto; }
 .mock-bar { display: flex; align-items: center; gap: 0.4em; padding: 0.7em 1em; background: #e6e3dc; }
 .mock-bar i { width: 0.65em; height: 0.65em; border-radius: 50%; background: #c9c5bc; }
 .mock-bar span { margin-left: 1em; padding: 0.2em 1.2em; border-radius: 1em; background: #f6f4ef; font-size: 0.8em; color: #777; }

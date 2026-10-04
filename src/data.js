@@ -24,7 +24,9 @@ export const stats = [
 ];
 
 // Each project renders a mini browser mockup from `site` — no images required.
-// Add `image: '/your-image.jpg'` (placed in /public) to show a real screenshot instead.
+// Add `image: '/your-image.jpg'` (placed in /public) to show a real screenshot instead,
+// or `screenshot: '/file.jpg'` to show it inside the browser frame.
+// A `url` starting with '/' (e.g. a demo in /public/work/) opens in a new tab.
 export const projects = [
   {
     title: 'Ente Plumbing',
@@ -59,12 +61,13 @@ export const projects = [
   {
     title: 'Iron Peak Fitness',
     category: 'Gym Website',
-    year: '2025',
-    description: 'A bold, high-energy website for a local gym featuring class schedules and membership plans.',
-    tags: ['Branding', 'Development', 'CMS'],
-    colors: ['#d4ff3f', '#1c2404'],
-    site: { domain: 'ironpeakfit.com', kicker: 'Train Harder', headline: 'Stronger every single week.', cta: 'Join now' },
-    url: '#',
+    year: '2026',
+    description: 'A bold, high-energy website for an Edmonton gym — live class schedule with booking, membership plans, coach profiles and a free-pass sign-up flow.',
+    tags: ['Design', 'Development', 'Animation'],
+    colors: ['#ff5a1f', '#2a0e03'],
+    site: { domain: 'ironpeakfitness.ca' },
+    screenshot: '/work/iron-peak.jpg',
+    url: '/work/iron-peak/',
   },
 ];
 
