@@ -26,7 +26,7 @@ export const stats = [
 // Each project renders a mini browser mockup from `site` — no images required.
 // Add `image: '/your-image.jpg'` (placed in /public) to show a real screenshot instead,
 // or `screenshot: '/file.jpg'` to show it inside the browser frame.
-// A `url` starting with '/' (e.g. a demo in /public/work/) opens in a new tab.
+// Any real `url` (a live site, or a demo in /public/work/) opens in a new tab.
 export const projects = [
   {
     title: 'Ente Plumbing',
@@ -35,8 +35,9 @@ export const projects = [
     description: 'A fast, mobile-friendly website for a local plumbing company, built to turn visitors into booked jobs.',
     tags: ['Design', 'Development', 'SEO'],
     colors: ['#3d6bff', '#0a1440'],
-    site: { domain: 'enteplumbing.com', kicker: '24/7 Emergency Service', headline: 'Plumbing done right, the first time.', cta: 'Get a quote' },
-    url: '#',
+    site: { domain: 'ente-plumbing.vercel.app' },
+    screenshot: '/work/ente-plumbing.jpg',
+    url: 'https://ente-plumbing.vercel.app/',
   },
   {
     title: 'Spark Clean',
@@ -44,19 +45,21 @@ export const projects = [
     year: '2026',
     description: 'A clean, modern website for a professional cleaning service with online booking.',
     tags: ['Design', 'Development', 'Booking'],
-    colors: ['#ff4d1c', '#3a0d02'],
-    site: { domain: 'sparkclean.ca', kicker: 'Homes & Offices', headline: 'A spotless space, without the stress.', cta: 'Book a clean' },
-    url: '#',
+    colors: ['#22c55e', '#052e16'],
+    site: { domain: 'spark-clean-blue.vercel.app' },
+    screenshot: '/work/spark-clean.jpg',
+    url: 'https://spark-clean-blue.vercel.app/',
   },
   {
     title: 'Maple Dental',
     category: 'Healthcare Website',
     year: '2025',
-    description: 'A calm, trustworthy site for a family dental clinic, with appointment requests and service pages.',
-    tags: ['Design', 'Development', 'Forms'],
+    description: 'A calm, trustworthy site for a West Edmonton family dental clinic — filterable services, team profiles, live open/closed hours and a 3-step appointment booking flow.',
+    tags: ['Design', 'Development', 'Booking'],
     colors: ['#2fbf9b', '#06302a'],
-    site: { domain: 'mapledental.ca', kicker: 'Family Dentistry', headline: 'Healthy smiles for the whole family.', cta: 'Book a visit' },
-    url: '#',
+    site: { domain: 'mapledental.ca' },
+    screenshot: '/work/maple-dental.jpg',
+    url: '/work/maple-dental/index.html',
   },
   {
     title: 'Iron Peak Fitness',
@@ -67,7 +70,7 @@ export const projects = [
     colors: ['#ff5a1f', '#2a0e03'],
     site: { domain: 'ironpeakfitness.ca' },
     screenshot: '/work/iron-peak.jpg',
-    url: '/work/iron-peak/',
+    url: '/work/iron-peak/index.html',
   },
 ];
 

@@ -85,7 +85,7 @@ document.querySelector('#app').innerHTML = `
       </div>
       <div class="work-grid">
         ${projects.map((p, i) => `
-          <a href="${p.url}" class="work-card reveal"${p.url.startsWith('/') ? ' target="_blank" rel="noopener"' : ''} style="transition-delay:${(i % 2) * 100}ms">
+          <a href="${p.url}" class="work-card reveal"${p.url !== '#' ? ' target="_blank" rel="noopener"' : ''} style="transition-delay:${(i % 2) * 100}ms">
             ${visual(p)}
             <div class="work-info">
               <h3 class="work-title">${p.title} ${arrow}</h3>
